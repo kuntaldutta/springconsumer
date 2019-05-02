@@ -30,7 +30,7 @@ public class CallRestService  {
 		
 		//Person person = restTemplate.getForObject(System.getenv("SpringBootApp_v1"),Person.class);
 		
-		String url = System.getenv("SPRING_SERVICE_HOST") + ":" +System.getenv("SPRING_SERVICE_PORT") + "/v1/persons/1";
+		String url = System.getenv("SPRINGAPP_SERVICE_HOST") + ":" +System.getenv("SPRINGAPP_SERVICE_PORT") + "/v1/persons/1";
 		System.out.println("url : "+url);
 		
 		Person person = restTemplate.getForObject(url, Person.class);
@@ -51,7 +51,7 @@ public class CallRestService  {
      	
 		//Person person = restTemplate.getForObject(environment.getProperty("person.v2.url"), Person.class);
 	    
-		String url1 = System.getenv("SPRING_SERVICE_HOST") + ":" +System.getenv("port_app2") + "/v2/persons/2";
+		String url1 = System.getenv("SPRINGAPP_SERVICE_HOST") + ":" +System.getenv("SPRINGAPP_SERVICE_PORT") + "/v2/persons/2";
 		System.out.println("url1 : "+url1);
 		
 		Person person = restTemplate.getForObject(url1, Person.class);

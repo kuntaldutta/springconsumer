@@ -1,12 +1,5 @@
 package com.luv2code.springboot.springconsumer.model;
 
-
-import javax.xml.bind.annotation.XmlRootElement;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-//@XmlRootElement
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Person {
 	
 	

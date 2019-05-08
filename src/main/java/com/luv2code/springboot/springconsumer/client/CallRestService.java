@@ -30,11 +30,12 @@ public class CallRestService  {
 		
 		//Person person = restTemplate.getForObject(System.getenv("SpringBootApp_v1"),Person.class);
 		
-		//String url = System.getenv("SPRINGAPP_SERVICE_HOST") + ":" +System.getenv("SPRINGAPP_SERVICE_PORT") + "/v1/persons/1";
-		//System.out.println("url : "+url);
-		Person person = restTemplate.getForObject("http://springapp.myproject.svc.{cluster}.local:8888/v1/persons/1", Person.class);
+		String url = System.getenv("SPRINGAPP_SERVICE_HOST") + ":" +System.getenv("SPRINGAPP_SERVICE_PORT") + "/v1/persons/1";
 		
-		//Person person = restTemplate.getForObject(url, Person.class);
+		//System.out.println("url : "+url);
+		//Person person = restTemplate.getForObject("http://springapp.myproject.svc.{cluster}.local:8888/v1/persons/1", Person.class);
+		
+		Person person = restTemplate.getForObject(url, Person.class);
 		
 		//System.out.println("The first name of the person is " + person.getFirstName());
 		//System.out.println("The last name of the person is " + person.getLastName());
@@ -49,15 +50,17 @@ public class CallRestService  {
 		
 		//Person person = restTemplate.getForObject("http://localhost:9999/v2/persons/2", Person.class);
 		
-		Person person = restTemplate.getForObject("http://springapp.myproject.svc.{cluster}.local:8888/v2/persons/2", Person.class);
+		//Person person = restTemplate.getForObject("http://springapp.myproject.svc.{cluster}.local:8888/v2/persons/2", Person.class);
 		
      	
 		//Person person = restTemplate.getForObject(environment.getProperty("person.v2.url"), Person.class);
 	    
 		String url1 = System.getenv("SPRINGAPP_SERVICE_HOST") + ":" +System.getenv("SPRINGAPP_SERVICE_PORT") + "/v2/persons/2";
+		
+		
 		//System.out.println("url1 : "+url1);
 		
-		//Person person = restTemplate.getForObject(url1, Person.class);
+		Person person = restTemplate.getForObject(url1, Person.class);
 		
 		
 		//Person person = restTemplate.getForObject(System.getenv("SpringBootApp_v2"), Person.class); 

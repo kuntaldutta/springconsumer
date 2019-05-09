@@ -28,29 +28,29 @@ public class CallRestService  {
 	private String restUrl2;
 
 	
-	@GetMapping("/v1/person")
+	@GetMapping("/1")
 	public String callRestService1(){
 		
-		
+		System.out.println();
 		
 		
 		RestTemplate restTemplate = new RestTemplate();
-		Person person = restTemplate.getForObject(restUrl1, Person.class);
+		String person = restTemplate.getForObject(restUrl1, String.class);
 		
 		
-		return person.getFirstName()+" from v1";
+		return person;
 		
 	}
 	
-	@GetMapping("/v2/person")
+	@GetMapping("/2")
 	public String callRestService2(){
 		
 		RestTemplate restTemplate = new RestTemplate();
-		Person person = restTemplate.getForObject(restUrl2, Person.class);
+		String person = restTemplate.getForObject(restUrl2, String.class);
 		
 		
 		
-		return person.getFirstName()+" from v2";
+		return person;
 		
 	}
 

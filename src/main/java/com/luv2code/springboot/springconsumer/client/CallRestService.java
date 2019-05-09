@@ -38,7 +38,7 @@ public class CallRestService  {
 		Person person = restTemplate.getForObject(restUrl1, Person.class);
 		
 		
-		return person.getFirstName();
+		return person.getFirstName()+" from v1";
 		
 	}
 	
@@ -50,7 +50,7 @@ public class CallRestService  {
 		
 		
 		
-		return person.getFirstName();
+		return person.getFirstName()+" from v2";
 		
 	}
 
